@@ -8,7 +8,7 @@ type Strategy = (bets: Bet[], gameResult: Score) => WinResult[]
 /**
  * Best approach for the team readability, but with extra memory usage
  * Time complexity: O(2n) => O(n), considering the flat method is doing n iterations
- * Time complexity: O(3n) => O(n)
+ * Memory complexity: O(3n) => O(n)
  */
 const calculateWins: Strategy = (bets: Bet[], gameResult: Score): WinResult[] => {
     const [gameHomeScore, gameAwayScore] = gameResult.split(':').map(Number)
